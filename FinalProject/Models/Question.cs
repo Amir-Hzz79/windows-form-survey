@@ -8,7 +8,7 @@ namespace FinalProject.Models
         public int Id { get; set; }
         public string Text { get; set; }
 
-        public ICollection<Poll> Polls { get; set; }
-        public ICollection<Answer> Answers { get; set; }
+        public List<Poll> Polls { get; set; }
+        public List<Answer> Answers { get; set; }
     }
 }
