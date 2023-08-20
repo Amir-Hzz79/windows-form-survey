@@ -1,4 +1,5 @@
 ﻿using FinalProject.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace FinalProject.Services
 {
@@ -8,6 +9,13 @@ namespace FinalProject.Services
         public PollService(MyDbContext dbContext)
         {
             _db = dbContext;
+        }
+
+        public List<Poll> GetAll(bool includeQuestion)
+        {
+            List<Poll> polls = _db.Polls.Include(p => p.UserAnswers).Include(p => p.Questions).ThenInclude(q => q.Answers).ToList();
+
+            return polls;
         }
 
         public bool Add(Poll poll)

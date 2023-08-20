@@ -10,5 +10,6 @@ namespace FinalProject.Models
         public string Description { get; set; }
 
         public ICollection<Question> Questions { get; set; }
+        public ICollection<UserAnswers> UserAnswers { get; set; }
     }
 }

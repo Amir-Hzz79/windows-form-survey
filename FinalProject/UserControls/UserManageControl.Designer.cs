@@ -47,6 +47,8 @@
             usersDataGridView.RowTemplate.Height = 29;
             usersDataGridView.Size = new Size(1052, 593);
             usersDataGridView.TabIndex = 0;
+            usersDataGridView.CellEndEdit += usersDataGridView_CellEndEdit;
+            
             // 
             // tableLayoutPanel1
             // 

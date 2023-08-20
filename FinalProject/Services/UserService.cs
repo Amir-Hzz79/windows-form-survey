@@ -15,6 +15,35 @@ namespace FinalProject.Services
             return _db.Users.ToList();
         }
 
+        public bool Add(User user)
+        {
+            try
+            {
+                _db.Users.Add(user);
+                _db.SaveChanges();
+
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public bool Update(User user)
+        {
+            try
+            {
+                _db.Users.Update(user);
+                _db.SaveChanges();
+
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
         public bool Login(string username, string password)
         {
             try
