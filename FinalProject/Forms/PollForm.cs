@@ -11,7 +11,7 @@ namespace FinalProject.Forms
 
 		Poll poll;
 
-		List<QuestionControl> questionControls=new List<QuestionControl>();
+		List<QuestionControl> questionControls = new List<QuestionControl>();
 
 		public PollForm(int id)
 		{
@@ -19,37 +19,15 @@ namespace FinalProject.Forms
 
 			InitializeComponent();
 
+			nameLable.Text = poll.Title;
+			descriptionLable.Text = poll.Description;
 
 			foreach (Question question in poll.Questions)
 			{
-				QuestionControl questionControl = new QuestionControl(question);
+				QuestionControl questionControl = new QuestionControl(question,true, -1);
 				questionControls.Add(questionControl);
 				containerPanel.Controls.Add(questionControl);
 			}
-
-			//int rowCount = poll.Questions.Count;
-
-			//// Calculate row height
-			//int rowHeight = 200;
-
-			//// Set RowStyles for each row
-			//for (int i = 0; i < rowCount; i++)
-			//{
-			//	questionTable.RowStyles.Add(new RowStyle(SizeType.Absolute, rowHeight));
-			//}
-
-			//List<Question> questions = poll.Questions.ToList();
-			//for (int i = 0; i < rowCount; i++)
-			//{
-			//	QuestionControl questionControl = new QuestionControl(questions[i]);
-			//	questionControl.Dock = DockStyle.Fill;
-			//	questionTable.Controls.Add(questionControl, 0, i);
-			//}
-			//// Call PerformLayout to apply the new row styles
-			//questionTable.SuspendLayout();
-			//questionTable.ResumeLayout();
-
-			//containerPanel.Controls.Add(questionTable);
 		}
 
 		private void saveButton_Click(object sender, EventArgs e)

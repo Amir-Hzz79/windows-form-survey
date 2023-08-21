@@ -27,8 +27,12 @@ namespace FinalProject
 
         private void pollHistory_Click(object sender, EventArgs e)
         {
-            
-        }
+			containerPanel.Controls.Clear();
+			ShowUnAvaiablePollsControl polls = new ShowUnAvaiablePollsControl();
+			polls.QuestionClicked += UserControl_QuestionClicked;
+			polls.PollFormClosed += NextForm_FormClosed;
+			containerPanel.Controls.Add(polls);
+		}
 
 		private void NextForm_FormClosed(object sender, FormClosedEventArgs e)
 		{

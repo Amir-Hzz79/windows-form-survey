@@ -17,7 +17,7 @@ namespace FinalProject.UserControls
 		{
 			InitializeComponent();
 
-			polls = _pollService.GetAllAvaiable(AppData.User.Id);
+			polls = _pollService.GetAllUnAvaiable(AppData.User.Id);
 			pollDataGridView.DataSource = polls;
 
 			pollDataGridView.Columns["Id"].Visible = false;
@@ -31,7 +31,8 @@ namespace FinalProject.UserControls
 
 			int selectedPollId = Convert.ToInt32(pollDataGridView.Rows[e.RowIndex].Cells[0].Value);
 			
-			PollForm pollForm = new PollForm(selectedPollId);
+
+			PollHistoryForm pollForm = new PollHistoryForm(selectedPollId);
 			pollForm.FormClosed += PollFormClosed;
 			pollForm.Show();
 

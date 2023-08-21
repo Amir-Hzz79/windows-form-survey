@@ -39,6 +39,10 @@
 			questionLabel = new Label();
 			tableLayoutPanel1 = new TableLayoutPanel();
 			tableLayoutPanel2 = new TableLayoutPanel();
+			answer1PercentLabel = new Label();
+			answer2PercentLabel = new Label();
+			answer3PercentLabel = new Label();
+			answer4PercentLabel = new Label();
 			tableLayoutPanel1.SuspendLayout();
 			tableLayoutPanel2.SuspendLayout();
 			SuspendLayout();
@@ -46,7 +50,7 @@
 			// radioButton4
 			// 
 			radioButton4.AutoSize = true;
-			radioButton4.Location = new Point(505, 144);
+			radioButton4.Location = new Point(511, 144);
 			radioButton4.Name = "radioButton4";
 			radioButton4.Size = new Size(14, 13);
 			radioButton4.TabIndex = 7;
@@ -57,7 +61,7 @@
 			// radioButton3
 			// 
 			radioButton3.AutoSize = true;
-			radioButton3.Location = new Point(505, 97);
+			radioButton3.Location = new Point(511, 97);
 			radioButton3.Name = "radioButton3";
 			radioButton3.Size = new Size(14, 13);
 			radioButton3.TabIndex = 8;
@@ -68,7 +72,7 @@
 			// radioButton2
 			// 
 			radioButton2.AutoSize = true;
-			radioButton2.Location = new Point(505, 50);
+			radioButton2.Location = new Point(511, 50);
 			radioButton2.Name = "radioButton2";
 			radioButton2.Size = new Size(14, 13);
 			radioButton2.TabIndex = 9;
@@ -79,7 +83,7 @@
 			// radioButton1
 			// 
 			radioButton1.AutoSize = true;
-			radioButton1.Location = new Point(505, 3);
+			radioButton1.Location = new Point(511, 3);
 			radioButton1.Name = "radioButton1";
 			radioButton1.Size = new Size(14, 13);
 			radioButton1.TabIndex = 10;
@@ -90,7 +94,7 @@
 			// answer4Label
 			// 
 			answer4Label.AutoSize = true;
-			answer4Label.Location = new Point(456, 141);
+			answer4Label.Location = new Point(455, 141);
 			answer4Label.Name = "answer4Label";
 			answer4Label.Size = new Size(40, 15);
 			answer4Label.TabIndex = 2;
@@ -99,7 +103,7 @@
 			// answer2Label
 			// 
 			answer2Label.AutoSize = true;
-			answer2Label.Location = new Point(456, 47);
+			answer2Label.Location = new Point(455, 47);
 			answer2Label.Name = "answer2Label";
 			answer2Label.Size = new Size(40, 15);
 			answer2Label.TabIndex = 3;
@@ -108,7 +112,7 @@
 			// answer3Label
 			// 
 			answer3Label.AutoSize = true;
-			answer3Label.Location = new Point(455, 94);
+			answer3Label.Location = new Point(454, 94);
 			answer3Label.Name = "answer3Label";
 			answer3Label.Size = new Size(41, 15);
 			answer3Label.TabIndex = 4;
@@ -117,7 +121,7 @@
 			// answer1Label
 			// 
 			answer1Label.AutoSize = true;
-			answer1Label.Location = new Point(459, 0);
+			answer1Label.Location = new Point(458, 0);
 			answer1Label.Name = "answer1Label";
 			answer1Label.Size = new Size(37, 15);
 			answer1Label.TabIndex = 5;
@@ -150,10 +154,11 @@
 			// 
 			// tableLayoutPanel2
 			// 
-			tableLayoutPanel2.ColumnCount = 3;
-			tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 4.100947F));
-			tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 4.258675F));
-			tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 91.64038F));
+			tableLayoutPanel2.ColumnCount = 4;
+			tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 2.94117641F));
+			tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 5.51470566F));
+			tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 45.955883F));
+			tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 45.5882339F));
 			tableLayoutPanel2.Controls.Add(radioButton4, 1, 3);
 			tableLayoutPanel2.Controls.Add(radioButton1, 1, 0);
 			tableLayoutPanel2.Controls.Add(radioButton3, 1, 2);
@@ -162,6 +167,10 @@
 			tableLayoutPanel2.Controls.Add(answer2Label, 2, 1);
 			tableLayoutPanel2.Controls.Add(answer3Label, 2, 2);
 			tableLayoutPanel2.Controls.Add(answer4Label, 2, 3);
+			tableLayoutPanel2.Controls.Add(answer1PercentLabel, 3, 0);
+			tableLayoutPanel2.Controls.Add(answer2PercentLabel, 3, 1);
+			tableLayoutPanel2.Controls.Add(answer3PercentLabel, 3, 2);
+			tableLayoutPanel2.Controls.Add(answer4PercentLabel, 3, 3);
 			tableLayoutPanel2.Dock = DockStyle.Fill;
 			tableLayoutPanel2.Location = new Point(3, 58);
 			tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -173,6 +182,42 @@
 			tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
 			tableLayoutPanel2.Size = new Size(544, 189);
 			tableLayoutPanel2.TabIndex = 7;
+			// 
+			// answer1PercentLabel
+			// 
+			answer1PercentLabel.AutoSize = true;
+			answer1PercentLabel.Location = new Point(207, 0);
+			answer1PercentLabel.Name = "answer1PercentLabel";
+			answer1PercentLabel.Size = new Size(38, 15);
+			answer1PercentLabel.TabIndex = 11;
+			answer1PercentLabel.Text = "label1";
+			// 
+			// answer2PercentLabel
+			// 
+			answer2PercentLabel.AutoSize = true;
+			answer2PercentLabel.Location = new Point(207, 47);
+			answer2PercentLabel.Name = "answer2PercentLabel";
+			answer2PercentLabel.Size = new Size(38, 15);
+			answer2PercentLabel.TabIndex = 11;
+			answer2PercentLabel.Text = "label1";
+			// 
+			// answer3PercentLabel
+			// 
+			answer3PercentLabel.AutoSize = true;
+			answer3PercentLabel.Location = new Point(207, 94);
+			answer3PercentLabel.Name = "answer3PercentLabel";
+			answer3PercentLabel.Size = new Size(38, 15);
+			answer3PercentLabel.TabIndex = 11;
+			answer3PercentLabel.Text = "label1";
+			// 
+			// answer4PercentLabel
+			// 
+			answer4PercentLabel.AutoSize = true;
+			answer4PercentLabel.Location = new Point(207, 141);
+			answer4PercentLabel.Name = "answer4PercentLabel";
+			answer4PercentLabel.Size = new Size(38, 15);
+			answer4PercentLabel.TabIndex = 11;
+			answer4PercentLabel.Text = "label1";
 			// 
 			// QuestionControl
 			// 
@@ -201,5 +246,9 @@
 		private Label questionLabel;
 		private TableLayoutPanel tableLayoutPanel1;
 		private TableLayoutPanel tableLayoutPanel2;
+		private Label answer1PercentLabel;
+		private Label answer2PercentLabel;
+		private Label answer3PercentLabel;
+		private Label answer4PercentLabel;
 	}
 }

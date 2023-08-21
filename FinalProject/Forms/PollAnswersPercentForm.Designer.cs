@@ -1,6 +1,6 @@
 ﻿namespace FinalProject.Forms
 {
-	partial class PollForm
+	partial class PollAnswersPercentForm
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -33,7 +33,6 @@
 			nameLable = new Label();
 			descriptionLable = new Label();
 			containerPanel = new FlowLayoutPanel();
-			saveButton = new Button();
 			tableLayoutPanel1.SuspendLayout();
 			tableLayoutPanel2.SuspendLayout();
 			SuspendLayout();
@@ -44,16 +43,14 @@
 			tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
 			tableLayoutPanel1.Controls.Add(tableLayoutPanel2, 0, 0);
 			tableLayoutPanel1.Controls.Add(containerPanel, 0, 1);
-			tableLayoutPanel1.Controls.Add(saveButton, 0, 2);
 			tableLayoutPanel1.Dock = DockStyle.Fill;
 			tableLayoutPanel1.Location = new Point(0, 0);
 			tableLayoutPanel1.Name = "tableLayoutPanel1";
-			tableLayoutPanel1.RowCount = 3;
+			tableLayoutPanel1.RowCount = 2;
 			tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 14.8888893F));
 			tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 85.1111145F));
-			tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 37F));
-			tableLayoutPanel1.Size = new Size(768, 457);
-			tableLayoutPanel1.TabIndex = 1;
+			tableLayoutPanel1.Size = new Size(800, 450);
+			tableLayoutPanel1.TabIndex = 3;
 			// 
 			// tableLayoutPanel2
 			// 
@@ -68,13 +65,13 @@
 			tableLayoutPanel2.RowCount = 2;
 			tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
 			tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-			tableLayoutPanel2.Size = new Size(762, 56);
+			tableLayoutPanel2.Size = new Size(794, 61);
 			tableLayoutPanel2.TabIndex = 1;
 			// 
 			// nameLable
 			// 
 			nameLable.AutoSize = true;
-			nameLable.Location = new Point(721, 0);
+			nameLable.Location = new Point(753, 0);
 			nameLable.Name = "nameLable";
 			nameLable.Size = new Size(38, 15);
 			nameLable.TabIndex = 0;
@@ -83,7 +80,7 @@
 			// descriptionLable
 			// 
 			descriptionLable.AutoSize = true;
-			descriptionLable.Location = new Point(721, 28);
+			descriptionLable.Location = new Point(753, 30);
 			descriptionLable.Name = "descriptionLable";
 			descriptionLable.Size = new Size(38, 15);
 			descriptionLable.TabIndex = 0;
@@ -93,32 +90,21 @@
 			// 
 			containerPanel.AutoScroll = true;
 			containerPanel.Dock = DockStyle.Fill;
-			containerPanel.Location = new Point(3, 65);
+			containerPanel.FlowDirection = FlowDirection.RightToLeft;
+			containerPanel.Location = new Point(3, 70);
 			containerPanel.Name = "containerPanel";
-			containerPanel.RightToLeft = RightToLeft.Yes;
-			containerPanel.Size = new Size(762, 351);
+			containerPanel.RightToLeft = RightToLeft.No;
+			containerPanel.Size = new Size(794, 377);
 			containerPanel.TabIndex = 2;
 			// 
-			// saveButton
+			// PollAnswersPercentForm
 			// 
-			saveButton.Location = new Point(3, 422);
-			saveButton.Name = "saveButton";
-			saveButton.Size = new Size(110, 32);
-			saveButton.TabIndex = 3;
-			saveButton.Text = "ثبت پاسخ ها";
-			saveButton.UseVisualStyleBackColor = true;
-			saveButton.Click += saveButton_Click;
-			// 
-			// PollForm
-			// 
-			AutoScaleDimensions = new SizeF(96F, 96F);
-			AutoScaleMode = AutoScaleMode.Dpi;
-			AutoScroll = true;
-			ClientSize = new Size(768, 457);
+			AutoScaleDimensions = new SizeF(7F, 15F);
+			AutoScaleMode = AutoScaleMode.Font;
+			ClientSize = new Size(800, 450);
 			Controls.Add(tableLayoutPanel1);
-			Name = "PollForm";
-			RightToLeft = RightToLeft.No;
-			Text = "PollForm";
+			Name = "PollAnswersPercentForm";
+			Text = "ShowPollAnswersPercent";
 			tableLayoutPanel1.ResumeLayout(false);
 			tableLayoutPanel2.ResumeLayout(false);
 			tableLayoutPanel2.PerformLayout();
@@ -126,11 +112,11 @@
 		}
 
 		#endregion
+
 		private TableLayoutPanel tableLayoutPanel1;
 		private TableLayoutPanel tableLayoutPanel2;
 		private Label nameLable;
 		private Label descriptionLable;
 		private FlowLayoutPanel containerPanel;
-		private Button saveButton;
 	}
 }
